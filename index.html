@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/module.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,19 +25,24 @@
     </header>
     <main>
       <section id="projects">
-        <article class="template">
-          <header>
-            <h1>Project Name</h1>
-            <div>
-              completed: <time pubdate datetime="2000-01-01">Publish Time</time>
-            </div>
-          </header>
-          <section class="project-description"></section>
-        </article>
+
       </section>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script id="project-template" type="text/x-handlebars-template">
+        <article class="template">
+          <header>
+            <h1>{{projectName}}</h1>
+            <div>
+              completed: <time pubdate datetime={{completed}}>{{completed}}</time>
+            </div>
+          </header>
+          <section class="project-description">
+            {{description}}
+          </section>
+        </article>
+    </script>
+
     <script src="scripts/app.js" charset="utf-8"></script>
   </body>
 </html>
