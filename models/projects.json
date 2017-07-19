@@ -3,16 +3,16 @@
       <header>
         <h1>{{projectName}}</h1>
         <div>
-          completed: <time pubdate datetime={{completed}}>{{completed}}</time>
+          date: <time pubdate datetime={{completed}}>{{completed}}</time>
         </div>
       </header>
       <section class="project-description">
-        {{description}}
+        {{{description}}}
       </section>
     </article>
 </script>*/
 
-{description: "<p>Ninja battles skeleton army in a timewarp where time cycles between speeding up and slowing down. Created the soundtrack.</p>
+{projectName: , completed: , description: "<p>Ninja battles skeleton army in a timewarp where time cycles between speeding up and slowing down. Created the soundtrack.</p>
 <img src="images/PaperCut.gif" alt="">
 <a href="https://github.com/ehgoodenough/papercut">Source Code</a>
 <h3>First Levels</h3>
